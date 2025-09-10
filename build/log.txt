@@ -1,0 +1,678 @@
+2025-09-10 13:50:33 debug tcp:创建从事件循环6个 /home/ubuntu/httpserver/reactor/tcpserver.cpp:15
+2025-09-10 13:50:33 info 尝试连接数据库 /home/ubuntu/httpserver/reactor/HttpServer.cpp:15
+2025-09-10 13:50:33 info 数据库连接成功 /home/ubuntu/httpserver/reactor/HttpServer.cpp:17
+2025-09-10 13:50:33 info Http服务器启动 /home/ubuntu/httpserver/reactor/HttpServer.cpp:23
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug Acceptor尝试连接新客户端 /home/ubuntu/httpserver/reactor/Acceptor.cpp:34
+2025-09-10 13:50:35 debug tcp:存放入map容器 /home/ubuntu/httpserver/reactor/tcpserver.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug tcp初始化新客户端数据完毕,准备回调http服务器的HandleNewConnection /home/ubuntu/httpserver/reactor/tcpserver.cpp:63
+2025-09-10 13:50:35 info new connection(fd=37,ip=183.230.12.202,port=7842) ok. /home/ubuntu/httpserver/reactor/HttpServer.cpp:39
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug Acceptor尝试连接新客户端 /home/ubuntu/httpserver/reactor/Acceptor.cpp:34
+2025-09-10 13:50:35 debug tcp:存放入map容器 /home/ubuntu/httpserver/reactor/tcpserver.cpp:58
+2025-09-10 13:50:35 debug tcp初始化新客户端数据完毕,准备回调http服务器的HandleNewConnection /home/ubuntu/httpserver/reactor/tcpserver.cpp:63
+2025-09-10 13:50:35 info new connection(fd=38,ip=183.230.12.202,port=7844) ok. /home/ubuntu/httpserver/reactor/HttpServer.cpp:39
+2025-09-10 13:50:35 debug ./www/index.html /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/index.html /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=37,ip=183.230.12.202,port=7842)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug ./www/index.html /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/index.html /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=37,ip=183.230.12.202,port=7842)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug ./www/css/animate.css /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/css/animate.css /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=38,ip=183.230.12.202,port=7844)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug Acceptor尝试连接新客户端 /home/ubuntu/httpserver/reactor/Acceptor.cpp:34
+2025-09-10 13:50:35 debug tcp:存放入map容器 /home/ubuntu/httpserver/reactor/tcpserver.cpp:58
+2025-09-10 13:50:35 debug tcp初始化新客户端数据完毕,准备回调http服务器的HandleNewConnection /home/ubuntu/httpserver/reactor/tcpserver.cpp:63
+2025-09-10 13:50:35 info new connection(fd=39,ip=183.230.12.202,port=7847) ok. /home/ubuntu/httpserver/reactor/HttpServer.cpp:39
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug Acceptor尝试连接新客户端 /home/ubuntu/httpserver/reactor/Acceptor.cpp:34
+2025-09-10 13:50:35 debug tcp:存放入map容器 /home/ubuntu/httpserver/reactor/tcpserver.cpp:58
+2025-09-10 13:50:35 debug tcp初始化新客户端数据完毕,准备回调http服务器的HandleNewConnection /home/ubuntu/httpserver/reactor/tcpserver.cpp:63
+2025-09-10 13:50:35 info new connection(fd=40,ip=183.230.12.202,port=7848) ok. /home/ubuntu/httpserver/reactor/HttpServer.cpp:39
+2025-09-10 13:50:35 debug ./www/css/magnific-popup.css /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/css/magnific-popup.css /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=39,ip=183.230.12.202,port=7847)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug Acceptor尝试连接新客户端 /home/ubuntu/httpserver/reactor/Acceptor.cpp:34
+2025-09-10 13:50:35 debug tcp:存放入map容器 /home/ubuntu/httpserver/reactor/tcpserver.cpp:58
+2025-09-10 13:50:35 debug tcp初始化新客户端数据完毕,准备回调http服务器的HandleNewConnection /home/ubuntu/httpserver/reactor/tcpserver.cpp:63
+2025-09-10 13:50:35 info new connection(fd=41,ip=183.230.12.202,port=7849) ok. /home/ubuntu/httpserver/reactor/HttpServer.cpp:39
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug ./www/css/font-awesome.min.css /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/css/font-awesome.min.css /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=40,ip=183.230.12.202,port=7848)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug ./www/index.html /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/index.html /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=37,ip=183.230.12.202,port=7842)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug ./www/images/profile-image.jpg /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/images/profile-image.jpg /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug Acceptor尝试连接新客户端 /home/ubuntu/httpserver/reactor/Acceptor.cpp:34
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=41,ip=183.230.12.202,port=7849)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug tcp:存放入map容器 /home/ubuntu/httpserver/reactor/tcpserver.cpp:58
+2025-09-10 13:50:35 debug tcp初始化新客户端数据完毕,准备回调http服务器的HandleNewConnection /home/ubuntu/httpserver/reactor/tcpserver.cpp:63
+2025-09-10 13:50:35 info new connection(fd=42,ip=183.230.12.202,port=7846) ok. /home/ubuntu/httpserver/reactor/HttpServer.cpp:39
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug ./www/css/magnific-popup.css /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/css/magnific-popup.css /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=39,ip=183.230.12.202,port=7847)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug ./www/index.html /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/index.html /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=37,ip=183.230.12.202,port=7842)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug ./www/css/font-awesome.min.css /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/css/font-awesome.min.css /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=40,ip=183.230.12.202,port=7848)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug ./www/css/magnific-popup.css /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/css/magnific-popup.css /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=39,ip=183.230.12.202,port=7847)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug ./www/index.html /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/index.html /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=37,ip=183.230.12.202,port=7842)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:35 debug ./www/css/magnific-popup.css /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:35 info file path ./www/css/magnific-popup.css /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:35 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:35 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:35 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:35 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:35 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:35 info 处理了(fd=39,ip=183.230.12.202,port=7847)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:35 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:35 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:35 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:35 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:35 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:36 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:36 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:36 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:36 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:36 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:36 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:36 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:36 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:36 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:36 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:36 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:36 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:36 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:36 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:36 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:45 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:45 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:45 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:45 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:45 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:45 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:45 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:45 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:45 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:45 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:45 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:45 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:45 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:45 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:45 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:50:45 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:45 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:50:45 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:50:45 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:50:45 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:50:45 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:50:45 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:50:45 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:50:45 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:50:45 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:50:45 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:50:45 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:50:45 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:50:45 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:50:45 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:16 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:16 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:16 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:16 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:16 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:16 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:16 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:16 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:16 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:16 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:16 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:16 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:16 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:16 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:16 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:16 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:16 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:16 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:16 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:16 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:16 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:16 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:16 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:16 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:16 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:16 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:16 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:16 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:16 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:16 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:28 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:28 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:28 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:28 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:28 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:28 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:28 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:28 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:28 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:28 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:28 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:28 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:28 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:28 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:28 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:28 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:28 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:28 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:28 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:28 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:28 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:28 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:28 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:28 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:28 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:28 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:28 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:28 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:28 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:28 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:29 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:29 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:29 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:29 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:29 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:29 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:29 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:29 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:29 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:29 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:29 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:29 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:29 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:29 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:29 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:30 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:30 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:30 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:30 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:30 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:30 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:30 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:30 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:30 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:30 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:30 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:30 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:30 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:30 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:30 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:30 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:30 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:30 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:30 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:30 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:30 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:30 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:30 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:30 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:30 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:30 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:30 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:30 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:30 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:30 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:30 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:30 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:30 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:30 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:30 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:30 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:30 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:30 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:30 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:30 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:30 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:30 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:30 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:30 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:30 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:31 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:31 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:31 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:31 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:31 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:31 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:31 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:31 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:31 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:31 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:31 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:31 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:31 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:31 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:31 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:31 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:31 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:31 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:31 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:31 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:31 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:31 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:31 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:31 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:31 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:31 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:31 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:31 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:31 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:31 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:35 info tcp conn timeout. /home/ubuntu/httpserver/reactor/tcpserver.cpp:140
+2025-09-10 13:51:35 info 正常关闭Connection /home/ubuntu/httpserver/reactor/Connection.cpp:31
+2025-09-10 13:51:35 info connection close(fd=38,ip=183.230.12.202,port=7844). /home/ubuntu/httpserver/reactor/HttpServer.cpp:46
+2025-09-10 13:51:35 debug Connection析构函数调用 /home/ubuntu/httpserver/reactor/Connection.cpp:16
+2025-09-10 13:51:35 info tcp conn timeout. /home/ubuntu/httpserver/reactor/tcpserver.cpp:140
+2025-09-10 13:51:35 info 正常关闭Connection /home/ubuntu/httpserver/reactor/Connection.cpp:31
+2025-09-10 13:51:35 info connection close(fd=41,ip=183.230.12.202,port=7849). /home/ubuntu/httpserver/reactor/HttpServer.cpp:46
+2025-09-10 13:51:35 debug Connection析构函数调用 /home/ubuntu/httpserver/reactor/Connection.cpp:16
+2025-09-10 13:51:35 info tcp conn timeout. /home/ubuntu/httpserver/reactor/tcpserver.cpp:140
+2025-09-10 13:51:35 info 正常关闭Connection /home/ubuntu/httpserver/reactor/Connection.cpp:31
+2025-09-10 13:51:35 info connection close(fd=40,ip=183.230.12.202,port=7848). /home/ubuntu/httpserver/reactor/HttpServer.cpp:46
+2025-09-10 13:51:35 debug Connection析构函数调用 /home/ubuntu/httpserver/reactor/Connection.cpp:16
+2025-09-10 13:51:35 info tcp conn timeout. /home/ubuntu/httpserver/reactor/tcpserver.cpp:140
+2025-09-10 13:51:35 info 正常关闭Connection /home/ubuntu/httpserver/reactor/Connection.cpp:31
+2025-09-10 13:51:35 info connection close(fd=37,ip=183.230.12.202,port=7842). /home/ubuntu/httpserver/reactor/HttpServer.cpp:46
+2025-09-10 13:51:35 debug Connection析构函数调用 /home/ubuntu/httpserver/reactor/Connection.cpp:16
+2025-09-10 13:51:35 info tcp conn timeout. /home/ubuntu/httpserver/reactor/tcpserver.cpp:140
+2025-09-10 13:51:35 info 正常关闭Connection /home/ubuntu/httpserver/reactor/Connection.cpp:31
+2025-09-10 13:51:35 info connection close(fd=39,ip=183.230.12.202,port=7847). /home/ubuntu/httpserver/reactor/HttpServer.cpp:46
+2025-09-10 13:51:35 debug Connection析构函数调用 /home/ubuntu/httpserver/reactor/Connection.cpp:16
+2025-09-10 13:51:36 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:36 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:36 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:36 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:36 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:36 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:36 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:36 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:36 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:36 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:36 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:36 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:36 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:36 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:36 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:36 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:36 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:36 debug Acceptor尝试连接新客户端 /home/ubuntu/httpserver/reactor/Acceptor.cpp:34
+2025-09-10 13:51:36 debug tcp:存放入map容器 /home/ubuntu/httpserver/reactor/tcpserver.cpp:58
+2025-09-10 13:51:36 debug tcp初始化新客户端数据完毕,准备回调http服务器的HandleNewConnection /home/ubuntu/httpserver/reactor/tcpserver.cpp:63
+2025-09-10 13:51:36 info new connection(fd=37,ip=183.230.12.202,port=7837) ok. /home/ubuntu/httpserver/reactor/HttpServer.cpp:39
+2025-09-10 13:51:36 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:36 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:36 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:36 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:36 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:36 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:36 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:36 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:36 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:36 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:36 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:36 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:36 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:36 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:36 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:42 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:42 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:42 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:42 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:42 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:42 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:42 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:42 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:42 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:42 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:42 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:42 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:42 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:42 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:42 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:42 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:42 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:42 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:42 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:42 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:42 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:42 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:42 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:42 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:42 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:42 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:42 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:42 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:42 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:42 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:45 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:45 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:45 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:45 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:45 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:45 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:45 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:45 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:45 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:45 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:45 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:45 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:45 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:45 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:45 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:45 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:45 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:45 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:45 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:45 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:45 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:45 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:45 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:45 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:45 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:45 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:45 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:45 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:45 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:45 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:51 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:51 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:51 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:51 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:51 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:51 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:51 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:51 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:51 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:51 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:51 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:51 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:51 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:51 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:51 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:51:51 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:51 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:51:51 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:51:51 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:51:51 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:51:51 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:51:51 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:51:51 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:51:51 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:51:51 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:51:51 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:51:51 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:51:51 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:51:51 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:51:51 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:52:10 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:52:10 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:52:10 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:52:10 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:52:10 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:52:10 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:52:10 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:52:10 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:52:10 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:52:10 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:52:10 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:52:10 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:52:10 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:52:10 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:52:10 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:52:10 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:52:10 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:52:10 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:52:10 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:52:10 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:52:10 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:52:10 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:52:10 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:52:10 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:52:10 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:52:10 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:52:10 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:52:10 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:52:10 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:52:10 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:52:19 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:52:19 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:52:19 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:52:19 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:52:19 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:52:19 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:52:19 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:52:19 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:52:19 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:52:19 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:52:19 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:52:19 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:52:19 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:52:19 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:52:19 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:52:20 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:52:20 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:52:20 debug ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:64
+2025-09-10 13:52:20 info file path ./www/js/jquery.js /home/ubuntu/httpserver/http/httpresponse.cpp:133
+2025-09-10 13:52:20 debug 调用Connection send函数 /home/ubuntu/httpserver/reactor/Connection.cpp:51
+2025-09-10 13:52:20 debug 本线程是从事件线程，将处理发送事件 /home/ubuntu/httpserver/reactor/Connection.cpp:55
+2025-09-10 13:52:20 debug 调用Connection sendinloop函数 /home/ubuntu/httpserver/reactor/Connection.cpp:68
+2025-09-10 13:52:20 debug 唤起写事件 /home/ubuntu/httpserver/reactor/Connection.cpp:70
+2025-09-10 13:52:20 debug 注册写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:26
+2025-09-10 13:52:20 info 处理了(fd=42,ip=183.230.12.202,port=7846)的数据. /home/ubuntu/httpserver/reactor/HttpServer.cpp:58
+2025-09-10 13:52:20 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:52:20 debug 发生写事件 /home/ubuntu/httpserver/reactor/Channel.cpp:80
+2025-09-10 13:52:20 debug 准备发送数据 /home/ubuntu/httpserver/reactor/Connection.cpp:76
+2025-09-10 13:52:20 debug 发送数据完毕 /home/ubuntu/httpserver/reactor/Connection.cpp:97
+2025-09-10 13:52:20 info Message send complete. /home/ubuntu/httpserver/reactor/HttpServer.cpp:133
+2025-09-10 13:52:36 info tcp conn timeout. /home/ubuntu/httpserver/reactor/tcpserver.cpp:140
+2025-09-10 13:52:36 info 正常关闭Connection /home/ubuntu/httpserver/reactor/Connection.cpp:31
+2025-09-10 13:52:36 info connection close(fd=37,ip=183.230.12.202,port=7837). /home/ubuntu/httpserver/reactor/HttpServer.cpp:46
+2025-09-10 13:52:36 debug Connection析构函数调用 /home/ubuntu/httpserver/reactor/Connection.cpp:16
+2025-09-10 13:53:20 info tcp conn timeout. /home/ubuntu/httpserver/reactor/tcpserver.cpp:140
+2025-09-10 13:53:20 info 正常关闭Connection /home/ubuntu/httpserver/reactor/Connection.cpp:31
+2025-09-10 13:53:20 info connection close(fd=42,ip=183.230.12.202,port=7846). /home/ubuntu/httpserver/reactor/HttpServer.cpp:46
+2025-09-10 13:53:20 debug Connection析构函数调用 /home/ubuntu/httpserver/reactor/Connection.cpp:16
+2025-09-10 13:53:26 info Http服务器关闭 /home/ubuntu/httpserver/reactor/HttpServer.cpp:28
+2025-09-10 13:53:26 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:53:26 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:53:26 debug 处理因事件管道唤起的事件 /home/ubuntu/httpserver/reactor/Eventloop.cpp:90
+2025-09-10 13:53:26 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:53:26 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:53:26 debug 处理因事件管道唤起的事件 /home/ubuntu/httpserver/reactor/Eventloop.cpp:90
+2025-09-10 13:53:26 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:53:26 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:53:26 debug 处理因事件管道唤起的事件 /home/ubuntu/httpserver/reactor/Eventloop.cpp:90
+2025-09-10 13:53:26 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:53:26 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:53:26 debug 处理因事件管道唤起的事件 /home/ubuntu/httpserver/reactor/Eventloop.cpp:90
+2025-09-10 13:53:26 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:53:26 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:53:26 debug 处理因事件管道唤起的事件 /home/ubuntu/httpserver/reactor/Eventloop.cpp:90
+2025-09-10 13:53:26 debug 有新的事件准备处理 /home/ubuntu/httpserver/reactor/Eventloop.cpp:48
+2025-09-10 13:53:26 debug 发生读事件 /home/ubuntu/httpserver/reactor/Channel.cpp:76
+2025-09-10 13:53:26 debug 处理因事件管道唤起的事件 /home/ubuntu/httpserver/reactor/Eventloop.cpp:90

@@ -1,0 +1,35 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/httpserver.dir/http/httprequest.cpp.o"
+  "CMakeFiles/httpserver.dir/http/httpresponse.cpp.o"
+  "CMakeFiles/httpserver.dir/logger/log_console_output.cpp.o"
+  "CMakeFiles/httpserver.dir/logger/log_fac.cpp.o"
+  "CMakeFiles/httpserver.dir/logger/log_file_output.cpp.o"
+  "CMakeFiles/httpserver.dir/logger/logger.cpp.o"
+  "CMakeFiles/httpserver.dir/logger/user_format.cpp.o"
+  "CMakeFiles/httpserver.dir/logger/xconfig.cpp.o"
+  "CMakeFiles/httpserver.dir/logger/xlog_format.cpp.o"
+  "CMakeFiles/httpserver.dir/memory_pool2/centralCache.cpp.o"
+  "CMakeFiles/httpserver.dir/memory_pool2/pageCache.cpp.o"
+  "CMakeFiles/httpserver.dir/memory_pool2/threadcache.cpp.o"
+  "CMakeFiles/httpserver.dir/mysql/sqlconnpool.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/Buffer.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/Channel.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/Connection.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/InetAddress.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/Socket.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/ThreadPool.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/Timestamp.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/main.cpp.o"
+  "CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o"
+  "httpserver"
+  "httpserver.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/httpserver.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
