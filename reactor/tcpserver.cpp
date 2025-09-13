@@ -1,34 +1,36 @@
 #include"tcpserver.h"
 #include"Connection.h"
 
-TcpServer::TcpServer(const std::string &ip,const uint16_t port,int threadnum,int timeoutMs,bool OptLinger)
+TcpServer::TcpServer(const std::string &ip,const uint16_t port,int threadnum,int timeoutS,bool OptLinger)
 :threadnum_(threadnum),mainloop_(new EventLoop(/*true,30,timeoutMs/1000*/)),
 acceptor_(mainloop_.get(),ip,port,OptLinger),threadpool_(threadnum_,"IO"),
-ts_tcp_conn_timeout_ms_(timeoutMs),log(LogFac::Instance()){
+ts_tcp_conn_timeout_s_(timeoutS),time_wheel_(1,60),log(LogFac::Instance()){
   //对log进行初始化
   log.Init(true);
   mainloop_->setepolltimeoutcallback(std::bind(&TcpServer::epolltimeout,this,std::placeholders::_1));
-  
+
   acceptor_.setnewconnecioncb(std::bind(&TcpServer::newconnection,this,std::placeholders::_1));
-  
+
   //创建从事件循环
 LOGDEBUG("tcp:创建从事件循环"+std::to_string(threadnum_)+"个");
   for(int i=0;i<threadnum_;i++){
     subloops_.emplace_back(new EventLoop(/*false,30,timeoutMs/1000*/));   //创建从事件循环，存入subloops_容器中
     subloops_[i]->setepolltimeoutcallback(std::bind(&TcpServer::epolltimeout,this,std::placeholders::_1));
     //时间戳
-    //subloops_[i]->settimercallback(std::bind(&TcpServer::removeconn,this,std::placeholders::_1));   //设置清闲空闲tcp连接的回调函数
+    //subloops_[i]->settimercallback([this]{time_wheel_.tick();});   //设置清闲空闲tcp连接的回调函数
     
     threadpool_.addtask(std::bind(&EventLoop::run,subloops_[i].get()));
   }
   //定时器
-  ts_timer_.run();
+  //ts_timer_.run();
+
 }
 
 TcpServer:: ~TcpServer(){
 }
 
 void TcpServer::start(){
+  time_wheel_.start();
   mainloop_->run();
 }
 void TcpServer::stop(){
@@ -49,10 +51,12 @@ void TcpServer::newconnection(std::unique_ptr<Socket>clientsock){
   conn->setsendcompletecallback(std::bind(&TcpServer::sendcomplete,this,std::placeholders::_1));
   
   //定时器
+  //conn->setupdatetimercallback(std::bind(&TcpServer::update_conn_timeout_time,this,std::placeholders::_1));
+  ////conn->setclosetimercallback(std::bind(&TcpServer::closeconntimer,this,std::placeholders::_1));
+  //add_new_tcp_conn(conn);//增加一个定时器，设定时间，超过时间后将关闭连接
+  //时间轮
   conn->setupdatetimercallback(std::bind(&TcpServer::update_conn_timeout_time,this,std::placeholders::_1));
-  //conn->setclosetimercallback(std::bind(&TcpServer::closeconntimer,this,std::placeholders::_1));
-  add_new_tcp_conn(conn);//增加一个定时器，设定时间，超过时间后将关闭连接
-
+  add_new_conn_timernode(conn);
   {
     std::lock_guard<std::mutex> lock(mmutex_);
 LOGDEBUG("tcp:存放入map容器");
@@ -66,18 +70,20 @@ LOGDEBUG("tcp初始化新客户端数据完毕,准备回调http服务器的Handl
 
 void TcpServer::closeconnection(spConnection conn){
   if(closeconnectioncb_)closeconnectioncb_(conn);
-  ts_timer_.cancel(conn->get_timer_id());
+  //ts_timer_.cancel(conn->get_timer_id());
+  time_wheel_.remove_connection(conn);
   //printf("client(eventfd=%d) disconnected.\n",conn->fd());
   {
     std::lock_guard<std::mutex> lock(mmutex_);
     conns_.erase(conn->fd());
   }
-  
 
 }
+
 void TcpServer::errorconnection(spConnection conn){
   if(errorconnectioncb_) errorconnectioncb_(conn);
-  ts_timer_.cancel(conn->get_timer_id());
+  //ts_timer_.cancel(conn->get_timer_id());
+  time_wheel_.remove_connection(conn);
   {
     std::lock_guard<std::mutex> lock(mmutex_);
     conns_.erase(conn->fd());
@@ -130,32 +136,45 @@ void TcpServer::setsendcomplete(std::function<void(spConnection)>fn){
 
 
 //定时器
-void TcpServer::add_new_tcp_conn(spConnection conn){
-  std::weak_ptr<Connection> weak_conn = conn;
-  
-  auto timer_id = ts_timer_.run_after(ts_tcp_conn_timeout_ms_,false,
-    [weak_conn]()->void
-    {
-      if (auto shared_conn = weak_conn.lock()){
-        LOGINFO("tcp conn timeout.");
-        shared_conn->closecallback();
-      }else{
-        LOGERROR("Failed to lock weak_ptr in timer callback - connection already destroyed.");
-      }
-      
-    }   
-  );
-  conn->set_timer_id(timer_id);
-}
-void TcpServer::update_conn_timeout_time(spConnection conn){
-  ts_timer_.cancel(conn->get_timer_id());
-  add_new_tcp_conn(conn);
-}
 
-void TcpServer::set_tcp_conn_timeout_ms(int ms){
-  ts_tcp_conn_timeout_ms_ =ms;
-}
+// void TcpServer::add_new_tcp_conn(spConnection conn){
+//   std::weak_ptr<Connection> weak_conn = conn;
+  
+//   auto timer_id = ts_timer_.run_after(ts_tcp_conn_timeout_ms_,false,
+//     [weak_conn]()->void
+//     {
+//       if (auto shared_conn = weak_conn.lock()){
+//         LOGINFO("tcp conn timeout.");
+//         shared_conn->closecallback();
+//       }else{
+//         LOGERROR("Failed to lock weak_ptr in timer callback - connection already destroyed.");
+//       }
+      
+//     }   
+//   );
+//   conn->set_timer_id(timer_id);
+// }
+// void TcpServer::update_conn_timeout_time(spConnection conn){
+//   ts_timer_.cancel(conn->get_timer_id());
+//   add_new_tcp_conn(conn);
+// }
+
+// void TcpServer::set_tcp_conn_timeout_ms(int ms){
+//   ts_tcp_conn_timeout_ms_ =ms;
+// }
 
 // void TcpServer::closeconntimer(spConnection conn){
 //   ts_timer_.cancel(conn->get_timer_id());
 // }
+
+void TcpServer::add_new_conn_timernode(spConnection conn) {
+    // 添加到时间轮，设置超时时间
+    time_wheel_.add_connection(conn, ts_tcp_conn_timeout_s_);
+    
+    // ... 其余代码
+}
+void TcpServer::update_conn_timeout_time(spConnection conn) {
+    // 更新时间轮中的定时器
+    time_wheel_.update_connection(conn);
+}
+

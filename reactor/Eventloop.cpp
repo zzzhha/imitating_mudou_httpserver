@@ -6,6 +6,8 @@
 //   memset(&timeout,0,sizeof(itimerspec));
 //   timeout.it_value.tv_sec= sec;
 //   timeout.it_value.tv_nsec=0;
+//   timeout.it_interval.tv_sec = 1;
+//   timeout.it_interval.tv_nsec = 0;
 //   timerfd_settime(tfd,0,&timeout,0);
 //   return tfd;
 // }
@@ -19,8 +21,8 @@ timetvl_(timetvl),timeout_(timeout),*/stop_(false){
   wakeupchannel_->enablereading();
   
   //时间戳
-  //timerchannel_->setreadcallback(std::bind(&EventLoop::handletimer,this));
-  //timerchannel_->enablereading();
+  // timerchannel_->setreadcallback(std::bind(&EventLoop::handletimer,this));
+  // timerchannel_->enablereading();
 }
 
 EventLoop::~EventLoop(){
@@ -33,6 +35,7 @@ void EventLoop::run(){
   //在run中，不管是主还是从时间循环，run函数都是先加入了线程池中，再进行run函数，所以主从事件循环都能正确获得线程号
   threadid_ =syscall(SYS_gettid); 
   while(stop_==false){
+    
     //loop中 取得由ep监听的fd中发生了事件的fd，并且封装为channel
     //设置了channel的revent(已发生事件)，并且拷贝了此fd对应的channel的信息
     //相当于把由channel封装后的fd，将其发生事件的fd提取出来，并根据其发生的事件设置其revent
@@ -101,30 +104,15 @@ LOGDEBUG("处理因事件管道唤起的事件");
 }
 
 //时间戳
-/*
-void EventLoop::handletimer(){
-  //重新计时
-  struct itimerspec timeout;    //定时时间的数据结构
-  memset(&timeout,0,sizeof(itimerspec));
-  timeout.it_value.tv_sec= timetvl_;
-  timeout.it_value.tv_nsec=0;
-  timerfd_settime(timerfd_,0,&timeout,0);
-  
-  if(mainloop_){ 
-    //printf("主事件循环闹钟定时时间到了. \n");
-  }else{
-    //printf("EventLoop:handletimer() thread is %d fd",syscall(SYS_gettid));
-    time_t now =time(0);  //获取当前时间
 
-    for(auto it=conns_.begin();it!=conns_.end();){
-      if(it->second->timeout(now,timeout_)){
-        timercallback_(it->first);
-        std::lock_guard<std::mutex>gd(mmutex_);
-        it = conns_.erase(it);
-      }else it++;     
-    }
-  }
-}
+// void EventLoop::handletimer(){
+//   uint64_t expirations;
+//   read(timerfd_, &expirations, sizeof(expirations));
+//   if (timerwheelcallback_) {
+//         timerwheelcallback_();
+//   }
+// }
+/*
 //时间戳
 void EventLoop::newconnection(spConnection conn){
   {
@@ -132,8 +120,10 @@ void EventLoop::newconnection(spConnection conn){
     conns_[conn->fd()]=conn;
   }
 }
-//时间戳
-void EventLoop::settimercallback(std::function<void(int)> fn){
-  timercallback_=fn;
-}
+
 */
+//时间戳
+// void EventLoop::settimercallback(std::function<void()> fn){
+//   timerwheelcallback_=fn;
+// }
+

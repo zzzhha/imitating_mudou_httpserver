@@ -12,18 +12,15 @@ Acceptor::Acceptor(EventLoop* loop,const std::string &ip,uint16_t port,bool OptL
   servsock_.settcpnodelay(true);
   servsock_.bind(servaddr);
   servsock_.listen();
-LOGDEBUG("监听socket启动");
 
   //通过channel，将listenfd绑定channel绑定ep
   //设置ep监视fd的读事件
-  //acceptchannel_=new Channel(loop_,servsock_.fd());  
   acceptchannel_.setreadcallback(std::bind(&Acceptor::newconnection,this));
   acceptchannel_.enablereading();
 }
 
 Acceptor::~Acceptor(){
-  //delete servsock_;
-  //delete acceptchannel_;
+
 }
 
 void Acceptor::newconnection(){

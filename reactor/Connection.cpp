@@ -97,8 +97,10 @@ LOGDEBUG("准备发送数据");
 LOGDEBUG("发送数据完毕");
       sendcompletecallback_(shared_from_this());
       if(!request_.IsKeepAlive()){
+LOGDEBUG("不保持连接");
         closecallback();
       }
+LOGDEBUG("保持连接");
     }
   }else if(nwritten == -1){
     if(errno ==EAGAIN || errno ==EWOULDBLOCK){
@@ -129,12 +131,25 @@ void Connection::onmessage(){
       //时间戳
       //lasttime_=Timestamp::now();
       size_t original_size =inputbuffer_.readableBytes();
+      request_.Init();
       if(request_.parse(inputbuffer_)){
-        response_.Init("./www",request_.path(),request_.IsKeepAlive());
+LOGDEBUG("解析请求行完毕");
+        if (request_.path().find("/download")!=std::string::npos && request_.method() == "POST") {
+LOGDEBUG("是下载请求使用json解析下载请求"); 
+          std::string folder = request_.GetPost("folder");
+LOGDEBUG("folder:"+folder);
+          std::string fileName = request_.GetPost("fileName"); 
+LOGDEBUG("fliename: "+fileName);
+          std::string realPath("/" + folder + "/" + fileName);
+          
+          response_.Init("./html",realPath,request_.IsReturnJs(),request_.IsSuccessJs(),request_.IsDownload(),request_.IsKeepAlive());
+        }else{
+          response_.Init("./html",request_.path(),request_.IsReturnJs(),request_.IsSuccessJs() ,request_.IsDownload(),request_.IsKeepAlive());
+        }
+LOGDEBUG("path: "+request_.path());
         response_.MakeResponse(outputbuffer_);
         if(response_.File()!= nullptr){
           outputbuffer_.append(response_.File(),response_.FileLen());
-        }else{
         }
       send();
       //使用工作线程来处理业务
@@ -151,6 +166,7 @@ void Connection::onmessage(){
       }  
       break;
     }else if(nread==0){
+LOGDEBUG("对方断开调用关闭");
       closecallback();  //回调TcpServer::closecallback()
       break;
     }
@@ -181,6 +197,6 @@ void Connection::setupdatetimercallback(std::function<void(spConnection)> fn){
   updatetimercallback_=fn;
 }
 
-// void Connection::setclosetimercallback(std::function<void(spConnection)>fn){
-//   closetimercallback_=fn;
-// }
+void Connection::setclosetimercallback(std::function<void(spConnection)>fn){
+  closetimercallback_=fn;
+}

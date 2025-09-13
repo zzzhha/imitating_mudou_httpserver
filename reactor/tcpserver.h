@@ -7,6 +7,7 @@
 #include"ThreadPool.h"
 #include"../logger/log_fac.h"
 #include"../timer/timer.h"
+#include"../timer/TimeWheel.h"
 #include"Buffer.h"
 #include<map>
 #include<memory>
@@ -31,14 +32,14 @@ private:
   std::function<void(EventLoop*)> timeoutcb_;            //回调HttpServer::HandleTimeOut()
   LogFac& log;
 
-  Timer ts_timer_;
-  int ts_tcp_conn_timeout_ms_ { 6000 };
+  //定时器
+  //Timer ts_timer_;
+  int ts_tcp_conn_timeout_s_ { 360 };
 
-
-
-  
+  //时间轮 
+  TimeWheel time_wheel_;
 public:
-  TcpServer(const std::string &ip,const uint16_t port, int threadnum=3,int timeoutMs=6000,bool OptLinger=true);
+  TcpServer(const std::string &ip,const uint16_t port, int threadnum=3,int timeoutS=360,bool OptLinger=true);
   ~TcpServer();
 
   void start(); //运行事件循环
@@ -63,8 +64,14 @@ public:
 
 
   //定时器代码
-  void set_tcp_conn_timeout_ms(int ms);
+  //void set_tcp_conn_timeout_ms(int ms);
+  //void update_conn_timeout_time(spConnection conn);
+  //void add_new_tcp_conn(spConnection conn);
+  //void closeconntimer(spConnection conn);
+  
+  //时间轮
+  void add_new_conn_timernode(spConnection Connection);
   void update_conn_timeout_time(spConnection conn);
-  void add_new_tcp_conn(spConnection conn);
   void closeconntimer(spConnection conn);
+
 };

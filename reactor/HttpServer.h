@@ -18,8 +18,8 @@ private:
 
 public:
   HttpServer(const std::string &ip,uint16_t port,int timeoutMS,bool OptLinger=true,
-int sqlPort=3306,const char*sqlUser="webuser",const char*sqlPwd="1258977",const char*dbName="webserver",
-int subthreadnum=6,int workthreadnum=3,int connpoolnum=12,const std::string&static_path="../www");
+int sqlPort=3306,const char*sqlUser="webuser",const char*sqlPwd="12589777",const char*dbName="webserver",
+int subthreadnum=6,int workthreadnum=0,int connpoolnum=12,const std::string&static_path="../www");
   ~HttpServer();
 
   void start(); //启动业务

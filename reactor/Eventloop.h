@@ -30,12 +30,12 @@ private:
   std::unique_ptr<Channel> wakeupchannel_;  //eventfd的channel
 
   //时间戳
-  // int timerfd_;                 //定时器的fd
-  // std::unique_ptr<Channel> timerchannel_;   //定时器fd的channel
+  //int timerfd_;                 //定时器的fd
+  //std::unique_ptr<Channel> timerchannel_;   //定时器fd的channel
   // bool mainloop_;               //true表示主事件循环,false表示从事件循环
   // std::mutex mmutex_;           //保护conns_的互斥锁
   // std::map<int,spConnection> conns_;    //存放运行在该事件循环上全部的Connection对象
-  // std::function<void(int)> timercallback_;  //删除TcpServer中超时的Connection对象，将被设置为TcpServer::removeconn()
+  //std::function<void()> timerwheelcallback_;  //删除TcpServer中超时的Connection对象，将被设置为TimeWheel::tick()
   // int timetvl_;                 //闹钟时间间隔,单位 秒
   // int timeout_;                 //Connection对象超时时间,单位 秒
   
@@ -43,7 +43,7 @@ private:
   std::atomic_bool stop_;
 
 public:
-  EventLoop(/*bool mainloop,int timetvl=30,int timeout=80*/);    //在构造函数创建Epoll对象ep_
+  EventLoop(/*bool mainloop,int timetvl=30,int timeout=60*/);    //在构造函数创建Epoll对象ep_
   ~EventLoop();   //销毁ep_
 
   void run();     //运行事件循环
@@ -60,9 +60,9 @@ public:
 
 
   //时间戳
-  // void handletimer();   //闹钟响时执行的函数
+  //void handletimer();   //闹钟响时执行的函数
   // void newconnection(spConnection conn);  //把Connection对象保存到conns_中
   
   //定时器
-  void settimercallback(std::function<void(int)> fn);//设置定时器的回调函数
+  void settimercallback(std::function<void()> fn);//设置定时器的回调函数
 };

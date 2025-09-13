@@ -10,6 +10,7 @@ CMakeFiles/httpserver.dir/http/httprequest.cpp.o: ../logger/logger.h
 CMakeFiles/httpserver.dir/http/httprequest.cpp.o: ../memory_pool2/MemoryPool.h
 CMakeFiles/httpserver.dir/http/httprequest.cpp.o: ../memory_pool2/common.h
 CMakeFiles/httpserver.dir/http/httprequest.cpp.o: ../memory_pool2/threadcache.h
+CMakeFiles/httpserver.dir/http/httprequest.cpp.o: ../mysql/User.h
 CMakeFiles/httpserver.dir/http/httprequest.cpp.o: ../mysql/sqlConnRAII.h
 CMakeFiles/httpserver.dir/http/httprequest.cpp.o: ../mysql/sqlconnpool.h
 CMakeFiles/httpserver.dir/http/httprequest.cpp.o: ../reactor/Buffer.h
@@ -74,6 +75,15 @@ CMakeFiles/httpserver.dir/memory_pool2/threadcache.cpp.o: ../memory_pool2/common
 CMakeFiles/httpserver.dir/memory_pool2/threadcache.cpp.o: ../memory_pool2/threadcache.cpp
 CMakeFiles/httpserver.dir/memory_pool2/threadcache.cpp.o: ../memory_pool2/threadcache.h
 
+CMakeFiles/httpserver.dir/mysql/User.cpp.o: ../logger/log_fac.h
+CMakeFiles/httpserver.dir/mysql/User.cpp.o: ../logger/log_format.h
+CMakeFiles/httpserver.dir/mysql/User.cpp.o: ../logger/log_output.h
+CMakeFiles/httpserver.dir/mysql/User.cpp.o: ../logger/logger.h
+CMakeFiles/httpserver.dir/mysql/User.cpp.o: ../mysql/User.cpp
+CMakeFiles/httpserver.dir/mysql/User.cpp.o: ../mysql/User.h
+CMakeFiles/httpserver.dir/mysql/User.cpp.o: ../mysql/sqlConnRAII.h
+CMakeFiles/httpserver.dir/mysql/User.cpp.o: ../mysql/sqlconnpool.h
+
 CMakeFiles/httpserver.dir/mysql/sqlconnpool.cpp.o: ../logger/log_fac.h
 CMakeFiles/httpserver.dir/mysql/sqlconnpool.cpp.o: ../logger/log_format.h
 CMakeFiles/httpserver.dir/mysql/sqlconnpool.cpp.o: ../logger/log_output.h
@@ -90,6 +100,7 @@ CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../logger/logger.h
 CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../memory_pool2/MemoryPool.h
 CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../memory_pool2/common.h
 CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../memory_pool2/threadcache.h
+CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../mysql/User.h
 CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../mysql/sqlConnRAII.h
 CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../mysql/sqlconnpool.h
 CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../reactor/Acceptor.cpp
@@ -101,7 +112,6 @@ CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../reactor/Epoll.h
 CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../reactor/Eventloop.h
 CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../reactor/InetAddress.h
 CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../reactor/Socket.h
-CMakeFiles/httpserver.dir/reactor/Acceptor.cpp.o: ../reactor/Timestamp.h
 
 CMakeFiles/httpserver.dir/reactor/Buffer.cpp.o: ../memory_pool2/MemoryPool.h
 CMakeFiles/httpserver.dir/reactor/Buffer.cpp.o: ../memory_pool2/common.h
@@ -118,6 +128,7 @@ CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../logger/logger.h
 CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../memory_pool2/MemoryPool.h
 CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../memory_pool2/common.h
 CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../memory_pool2/threadcache.h
+CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../mysql/User.h
 CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../mysql/sqlConnRAII.h
 CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../mysql/sqlconnpool.h
 CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../reactor/Buffer.h
@@ -128,7 +139,6 @@ CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../reactor/Epoll.h
 CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../reactor/Eventloop.h
 CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../reactor/InetAddress.h
 CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../reactor/Socket.h
-CMakeFiles/httpserver.dir/reactor/Channel.cpp.o: ../reactor/Timestamp.h
 
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../http/httprequest.h
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../http/httpresponse.h
@@ -139,6 +149,7 @@ CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../logger/logger.h
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../memory_pool2/MemoryPool.h
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../memory_pool2/common.h
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../memory_pool2/threadcache.h
+CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../mysql/User.h
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../mysql/sqlConnRAII.h
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../mysql/sqlconnpool.h
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../reactor/Buffer.h
@@ -149,7 +160,6 @@ CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../reactor/Epoll.h
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../reactor/Eventloop.h
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../reactor/InetAddress.h
 CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../reactor/Socket.h
-CMakeFiles/httpserver.dir/reactor/Connection.cpp.o: ../reactor/Timestamp.h
 
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../http/httprequest.h
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../http/httpresponse.h
@@ -160,6 +170,7 @@ CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../logger/logger.h
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../memory_pool2/MemoryPool.h
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../memory_pool2/common.h
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../memory_pool2/threadcache.h
+CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../mysql/User.h
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../mysql/sqlConnRAII.h
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../mysql/sqlconnpool.h
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../reactor/Buffer.h
@@ -170,7 +181,6 @@ CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../reactor/Epoll.h
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../reactor/Eventloop.h
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../reactor/InetAddress.h
 CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../reactor/Socket.h
-CMakeFiles/httpserver.dir/reactor/Epoll.cpp.o: ../reactor/Timestamp.h
 
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../http/httprequest.h
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../http/httpresponse.h
@@ -181,6 +191,7 @@ CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../logger/logger.h
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../memory_pool2/MemoryPool.h
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../memory_pool2/common.h
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../memory_pool2/threadcache.h
+CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../mysql/User.h
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../mysql/sqlConnRAII.h
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../mysql/sqlconnpool.h
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../reactor/Buffer.h
@@ -191,7 +202,6 @@ CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../reactor/Eventloop.cpp
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../reactor/Eventloop.h
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../reactor/InetAddress.h
 CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../reactor/Socket.h
-CMakeFiles/httpserver.dir/reactor/Eventloop.cpp.o: ../reactor/Timestamp.h
 
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../http/httprequest.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../http/httpresponse.h
@@ -202,6 +212,7 @@ CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../logger/logger.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../memory_pool2/MemoryPool.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../memory_pool2/common.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../memory_pool2/threadcache.h
+CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../mysql/User.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../mysql/sqlConnRAII.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../mysql/sqlconnpool.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../reactor/Acceptor.h
@@ -215,8 +226,8 @@ CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../reactor/HttpServer.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../reactor/InetAddress.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../reactor/Socket.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../reactor/ThreadPool.h
-CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../reactor/Timestamp.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../reactor/tcpserver.h
+CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../timer/TimeWheel.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../timer/hash_map.h
 CMakeFiles/httpserver.dir/reactor/HttpServer.cpp.o: ../timer/timer.h
 
@@ -230,9 +241,6 @@ CMakeFiles/httpserver.dir/reactor/Socket.cpp.o: ../reactor/Socket.h
 CMakeFiles/httpserver.dir/reactor/ThreadPool.cpp.o: ../reactor/ThreadPool.cpp
 CMakeFiles/httpserver.dir/reactor/ThreadPool.cpp.o: ../reactor/ThreadPool.h
 
-CMakeFiles/httpserver.dir/reactor/Timestamp.cpp.o: ../reactor/Timestamp.cpp
-CMakeFiles/httpserver.dir/reactor/Timestamp.cpp.o: ../reactor/Timestamp.h
-
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../http/httprequest.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../http/httpresponse.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../logger/log_fac.h
@@ -242,6 +250,7 @@ CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../logger/logger.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../memory_pool2/MemoryPool.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../memory_pool2/common.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../memory_pool2/threadcache.h
+CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../mysql/User.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../mysql/sqlConnRAII.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../mysql/sqlconnpool.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../reactor/Acceptor.h
@@ -254,9 +263,9 @@ CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../reactor/HttpServer.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../reactor/InetAddress.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../reactor/Socket.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../reactor/ThreadPool.h
-CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../reactor/Timestamp.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../reactor/main.cpp
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../reactor/tcpserver.h
+CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../timer/TimeWheel.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../timer/hash_map.h
 CMakeFiles/httpserver.dir/reactor/main.cpp.o: ../timer/timer.h
 
@@ -269,6 +278,7 @@ CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../logger/logger.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../memory_pool2/MemoryPool.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../memory_pool2/common.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../memory_pool2/threadcache.h
+CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../mysql/User.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../mysql/sqlConnRAII.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../mysql/sqlconnpool.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../reactor/Acceptor.h
@@ -280,9 +290,31 @@ CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../reactor/Eventloop.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../reactor/InetAddress.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../reactor/Socket.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../reactor/ThreadPool.h
-CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../reactor/Timestamp.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../reactor/tcpserver.cpp
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../reactor/tcpserver.h
+CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../timer/TimeWheel.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../timer/hash_map.h
 CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.o: ../timer/timer.h
+
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../http/httprequest.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../http/httpresponse.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../logger/log_fac.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../logger/log_format.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../logger/log_output.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../logger/logger.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../memory_pool2/MemoryPool.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../memory_pool2/common.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../memory_pool2/threadcache.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../mysql/User.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../mysql/sqlConnRAII.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../mysql/sqlconnpool.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../reactor/Buffer.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../reactor/Channel.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../reactor/Connection.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../reactor/Epoll.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../reactor/Eventloop.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../reactor/InetAddress.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../reactor/Socket.h
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../timer/TimeWheel.cpp
+CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o: ../timer/TimeWheel.h
 

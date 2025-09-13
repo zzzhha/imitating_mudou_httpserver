@@ -108,6 +108,8 @@ set(MEMORY_POOL_SOURCES
 )
 # MySQL模块源文件
 set(MYSQL_SOURCES
+    mysql/User.h
+    mysql/User.cpp
     mysql/sqlconnpool.cpp
     mysql/sqlconnpool.h
     mysql/sqlConnRAII.h
@@ -137,14 +139,12 @@ set(REACTOR_SOURCES
     reactor/tcpserver.h
     reactor/ThreadPool.cpp
     reactor/ThreadPool.h
-    reactor/Timestamp.cpp
-    reactor/Timestamp.h
 )
 
 # Timer模块源文件
 set(TIMER_SOURCES
-    timer/timer.h
-    timer/hash_map.h
+    timer/TimeWheel.h
+    timer/TimeWheel.cpp
     # 注意：如果存在timer.cpp，请添加在这里
 )
 
@@ -165,11 +165,4 @@ target_link_libraries(${PROJECT_NAME}
     pthread
     m
     rt
-)
-
-# 复制www目录到构建目录
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-    ${CMAKE_SOURCE_DIR}/www
-    ${CMAKE_BINARY_DIR}/www
 )

@@ -52,7 +52,6 @@ std::vector<Channel*>Epoll::loop(int timeout){
   int number =epoll_wait(epollfd_,events_,MaxEvents,timeout);
   if(number<0){
     LOGERROR("epoll_wait error\n");
-    //perror("epoll_wait error");
     exit(-1);
   }
   if(number ==0){

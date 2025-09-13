@@ -7,9 +7,12 @@
 #include<errno.h>
 #include<mysql/mysql.h>
 #include <sys/stat.h>
+#include <rapidjson/document.h>
+
 #include"../reactor/Buffer.h"
 #include"../logger/log_fac.h"
-#include"../mysql/sqlConnRAII.h"
+//#include"../mysql/sqlConnRAII.h"
+#include"../mysql/User.h"
 
 
 class HttpRequest{
@@ -36,18 +39,6 @@ public:
     CLOSED_CONNECTION,
   };
 
-  enum class METHOD{
-    GET = 0,
-    POST,
-    HEAD,
-    PUT,
-    DELETE,
-    TRACE,
-    OPTIONS,
-    CONNECT,
-    PATCH
-  };
-
   HttpRequest() { Init(); }
   ~HttpRequest() =default;
 
@@ -64,7 +55,9 @@ public:
   std::string GetPost(const char* key) const;
 
   bool IsKeepAlive() const;
-
+  bool IsReturnJs() const;
+  bool IsSuccessJs() const;
+  bool IsDownload() const;
 private:
   bool ParseRequestLine_(const std::string& line);
   void ParseHeader_(const std::string& line);
@@ -73,7 +66,8 @@ private:
   void ParsePath_();
   void ParsePost_();
   void ParseFromUrlencoded_();
-
+  void ParseDownload_();
+  void HandleUserCommand(const std::string& cmd, const std::string& username, const std::string& password);
   static bool UserVerify(const std::string& name, const std::string& pwd, bool isLogin);
   
   PARSE_STATE state_;
@@ -83,6 +77,10 @@ private:
   std::string version_;
   std::string host_;
   std::string body_;
+
+  bool is_download_;
+  bool return_js_;
+  bool is_success_js_;
 
   std::unordered_map<std::string,std::string> header_;
   std::unordered_map<std::string,std::string> post_;

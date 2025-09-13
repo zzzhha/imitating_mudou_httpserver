@@ -1,9 +1,9 @@
 #include"HttpServer.h"
 
-HttpServer::HttpServer(const std::string &ip,uint16_t port,int timeoutMS,bool OptLinger,
+HttpServer::HttpServer(const std::string &ip,uint16_t port,int timeoutS,bool OptLinger,
 int sqlPort,const char*sqlUser,const char*sqlPwd,const char*dbName,
 int subthreadnum,int workthreadnum,int connpoolnum,const std::string&static_path)
-      :tcpserver_(ip,port,subthreadnum,timeoutMS,OptLinger),threadpool_(workthreadnum,"WORKS"),static_path_(static_path)
+      :tcpserver_(ip,port,subthreadnum,timeoutS,OptLinger),threadpool_(workthreadnum,"WORKS"),static_path_(static_path)
 {
   // 以下代码不是必须的，业务关心什么事件，就指定相应的回调函数。
   tcpserver_.setnewconnection(std::bind(&HttpServer::HandleNewConnection, this, std::placeholders::_1));

@@ -70,6 +70,7 @@ void Channel::setwritecallback(std::function<void()> fn){
 
 void Channel::handleevent(){
   if(revents_& EPOLLRDHUP){ //对方已关闭
+    
     closecallback_();
   }
   else if(revents_ &(EPOLLIN/*普通数据*/ | EPOLLPRI/*带外数据（一般不使用）*/)){//接收缓冲区有数据可读

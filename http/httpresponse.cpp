@@ -1,5 +1,21 @@
 #include"httpresponse.h"
 
+std::string UrlEncode(const std::string& utf8Str) {
+    std::stringstream ss;
+    ss << std::hex << std::setfill('0'); // 十六进制输出，不足两位补0
+
+    for (char c : utf8Str) {
+        // 无需编码的字符：字母、数字、- _ . ~
+        if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') ||
+            c == '-' || c == '_' || c == '.' || c == '~') {
+            ss << c;
+        } else {
+            // 其他字符（包括中文的 UTF-8 字节）转换为 %XX
+            ss << "%" << std::setw(2) << std::uppercase << (static_cast<unsigned int>(static_cast<unsigned char>(c)));
+        }
+    }
+    return ss.str();
+}
 
 const std::unordered_map<std::string,std::string> HttpResponse::SUFFIX_TYPE={
   {".html","text/html"},
@@ -15,7 +31,7 @@ const std::unordered_map<std::string,std::string> HttpResponse::SUFFIX_TYPE={
   {".jpeg","image/jpeg"},
   {".au","audio/basic"},
   {".mpeg","video/mpeg"},
-  {".mpg","vedeo/mpeg"},
+  {".mpg","video/mpeg"},
   {".avi","video/x-msvideo"},
   {".gz","application/x-gzip"},
   {".tar","application/x-tar"},
@@ -48,7 +64,7 @@ HttpResponse::~HttpResponse(){
   UnmapFile();
 }
 
-void HttpResponse::Init(const std::string& srcDir,std::string& path,bool isKeepAlive,int code){
+void HttpResponse::Init(const std::string& srcDir,std::string& path,bool isKeepAlive, bool is_js ,bool is_js_success ,bool is_download,int code){
   assert(srcDir!="");
   if(mmFile_){UnmapFile();}
   code_ = code;
@@ -57,11 +73,13 @@ void HttpResponse::Init(const std::string& srcDir,std::string& path,bool isKeepA
   mmFile_ = nullptr;
   mmFileStat_ ={0};
   isKeepAlive_=isKeepAlive;
+  is_js_ = is_js;
+  is_js_success_ = is_js_success;
+  is_download_=is_download;
 };
 
 void HttpResponse::MakeResponse(BufferBlock& buf){
   //判断请求的资源文件
-LOGDEBUG((srcDir_+path_).data());
   if(stat((srcDir_+path_).data(),&mmFileStat_)<0 || S_ISDIR(mmFileStat_.st_mode)){
     code_ = 404;
   }else if(!(mmFileStat_.st_mode & S_IROTH)){
@@ -115,32 +133,66 @@ void HttpResponse::AddHeader_(BufferBlock& buf){
   }else{
     buf.append("close\r\n",strlen("close\r\n"));
   }
-  std::string str("Content-type: "+GetFileType_()+"\r\n");
-  buf.append(str);
+  if (is_js_) {
+LOGDEBUG("接口请求强制返回JSON");
+    std::string jsonBody;
+    if (is_js_success_) {
+        jsonBody = "{\"success\": true, \"message\": \"登录成功\"}";
+      } else {
+        jsonBody = "{\"success\": false, \"message\": \"用户名或密码错误\"}";
+      }
+    buf.append("Content-Type: application/json; charset=utf-8\r\n",strlen("Content-Type: application/json; charset=utf-8\r\n"));
+    buf.append(("Content-Length: " + std::to_string(jsonBody.size()) + "\r\n").c_str(),strlen(("Content-Length: " + std::to_string(jsonBody.size()) + "\r\n").c_str()));
+    buf.append("\r\n", strlen("\r\n"));
+  } else {
+    // 静态资源使用原有逻辑（如text/html）
+  LOGDEBUG("静态资源使用原有逻辑");
+    if(is_download_){
+      std::string encodedFileName = UrlEncode(path_);
+      std::string Content_Disposition="Content_Disposition: attachment; filename*=UTF-8''" + encodedFileName;
+      buf.append(Content_Disposition);
+      buf.append("/r/n",strlen("/r/n"));
+    }
+    std::string str("Content-type: "+GetFileType_()+"\r\n");
+    buf.append(str);
+  }
 }
 
 void HttpResponse::AddContent_(BufferBlock &buf){
-  int srcFd = open((srcDir_ + path_).data(),O_RDONLY);
-  if(srcFd < 0){
-    ErrorContent(buf,"FileFound!");
-    return;
-  }
+  if (is_js_){
+    if(is_js_success_){
+LOGDEBUG("准备发送成功js信息");
+      std::string jsonBody = "{\"success\": true, \"message\": \"登录成功\"}";
+      buf.append(jsonBody);
+    }else{
+LOGDEBUG("准备发送失败js信息");
+      std::string jsonBody = "{\"success\": false, \"message\": \"用户名或密码错误\"}";
+      buf.append(jsonBody);
+    }
+  }else{
+LOGDEBUG("发送文件信息");
+    int srcFd = open((srcDir_ + path_).data(),O_RDONLY);
+    if(srcFd < 0){
+      ErrorContent(buf,"FileFound!");
+      return;
+    }
+    /* 将文件映射到内存提高文件的访问速度 
+    MAP_PRIVATE 建立一个写入时拷贝的私有映射*/
+    char buff[256];
+    sprintf(buff,"file path %s", (srcDir_ + path_).data());
+    LOGINFO(buff);
 
-   /* 将文件映射到内存提高文件的访问速度 
-  MAP_PRIVATE 建立一个写入时拷贝的私有映射*/
-  char buff[256];
-  sprintf(buff,"file path %s", (srcDir_ + path_).data());
-  LOGINFO(buff);
-
-  void* mmRet = mmap(0,mmFileStat_.st_size,PROT_READ,MAP_PRIVATE,srcFd,0);
-  if(mmRet == MAP_FAILED){
-    ErrorContent(buf, "File NotFound!");
-    return;
+    void* mmRet = mmap(0,mmFileStat_.st_size,PROT_READ,MAP_PRIVATE,srcFd,0);
+    if(mmRet == MAP_FAILED){
+      ErrorContent(buf, "File NotFound!");
+      return;
+    }
+    mmFile_ =static_cast<char*>(mmRet);
+    close(srcFd);
+    std::string str("Content-length: " + std::to_string(mmFileStat_.st_size) + "\r\n\r\n");
+    buf.append(str);
   }
-  mmFile_ =static_cast<char*>(mmRet);
-  close(srcFd);
-  std::string str("Content-length: " + std::to_string(mmFileStat_.st_size) + "\r\n\r\n");
-  buf.append(str);
+  
 }
 
 void HttpResponse::UnmapFile(){

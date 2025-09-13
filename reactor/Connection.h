@@ -11,7 +11,7 @@
 #include<memory>
 #include"../http/httprequest.h"
 #include"../http/httpresponse.h"
-#include"Timestamp.h"
+//#include"Timestamp.h"
 
 class Connection;
 class EventLoop;
@@ -27,7 +27,7 @@ private:
   std::function<void(spConnection)> errorcallback_;  //关闭fd_的回调函数,将回调TcpServer::errorconnection()
   std::function<void(spConnection/*暂且先注释了等后面需要用到工作线程在开出来,std::string&*/)> onmessagecallback_;  //处理报文的回调函数，将回调TcpServer::message()
   std::function<void(spConnection)>sendcompletecallback_;   //发送完数据后的回调函数，将回调TcpServer::sendcomplete()
-  //std::function<void(spConnection)>closetimercallback_;
+  std::function<void(spConnection)>closetimercallback_;
   std::atomic_bool disconnect_;    //客户端连接是否断开，如果断开设置为true
  
   ///时间戳
@@ -43,6 +43,7 @@ private:
   int tc_fd;
   int tc_timer_id{ -1 };
   std::function<void(spConnection)>updatetimercallback_;  //Connection发送报文后更新定时器，将回调TcpServer::update_conn_timeout_time()
+
 public:
   Connection(EventLoop*loop,std::unique_ptr<Socket>clientsock);
   ~Connection();
@@ -75,6 +76,6 @@ public:
   void set_timer_id(int id) {tc_timer_id = id;}
   int get_timer_id() { return tc_timer_id;}
   void setupdatetimercallback(std::function<void(spConnection)> fn);
-  //void setclosetimercallback(std::function<void(spConnection)>fn);
+  void setclosetimercallback(std::function<void(spConnection)>fn);
 
 };

@@ -35,7 +35,7 @@ int main(int argc ,const char*argv[]){
   signal(SIGTERM,Stop);
   signal(SIGINT,Stop);
 
-  httpserver=new HttpServer(argv[1],atoi(argv[2]),60000);
+  httpserver=new HttpServer(argv[1],atoi(argv[2]),360);
   httpserver->start();
   
   return 0;

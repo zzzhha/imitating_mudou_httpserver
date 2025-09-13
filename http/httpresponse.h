@@ -6,7 +6,8 @@
 #include <sys/stat.h>    
 #include <sys/mman.h> 
 #include <assert.h>
-
+#include <sstream>
+#include <iomanip>
 #include "../reactor/Buffer.h"
 #include"../logger/log_fac.h"
 class HttpResponse {
@@ -14,7 +15,7 @@ public:
     HttpResponse();
     ~HttpResponse();
 
-    void Init(const std::string& srcDir, std::string& path, bool isKeepAlive = false, int code = -1);
+    void Init(const std::string& srcDir, std::string& path, bool isKeepAlive = false, bool is_js=false,bool is_js_success=false,bool is_download=false, int code = -1);
     void MakeResponse(BufferBlock& buff);
     void UnmapFile();
     char* File();
@@ -39,6 +40,9 @@ private:
     char* mmFile_; 
     struct stat mmFileStat_;
 
+    bool is_js_;
+    bool is_js_success_;
+    bool is_download_;
     static const std::unordered_map<std::string, std::string> SUFFIX_TYPE;
     static const std::unordered_map<int, std::string> CODE_STATUS;
     static const std::unordered_map<int, std::string> CODE_PATH;

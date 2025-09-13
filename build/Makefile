@@ -447,6 +447,33 @@ memory_pool2/threadcache.cpp.s:
 	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/memory_pool2/threadcache.cpp.s
 .PHONY : memory_pool2/threadcache.cpp.s
 
+mysql/User.o: mysql/User.cpp.o
+
+.PHONY : mysql/User.o
+
+# target to build an object file
+mysql/User.cpp.o:
+	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/mysql/User.cpp.o
+.PHONY : mysql/User.cpp.o
+
+mysql/User.i: mysql/User.cpp.i
+
+.PHONY : mysql/User.i
+
+# target to preprocess a source file
+mysql/User.cpp.i:
+	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/mysql/User.cpp.i
+.PHONY : mysql/User.cpp.i
+
+mysql/User.s: mysql/User.cpp.s
+
+.PHONY : mysql/User.s
+
+# target to generate assembly for a file
+mysql/User.cpp.s:
+	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/mysql/User.cpp.s
+.PHONY : mysql/User.cpp.s
+
 mysql/sqlconnpool.o: mysql/sqlconnpool.cpp.o
 
 .PHONY : mysql/sqlconnpool.o
@@ -744,33 +771,6 @@ reactor/ThreadPool.cpp.s:
 	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/reactor/ThreadPool.cpp.s
 .PHONY : reactor/ThreadPool.cpp.s
 
-reactor/Timestamp.o: reactor/Timestamp.cpp.o
-
-.PHONY : reactor/Timestamp.o
-
-# target to build an object file
-reactor/Timestamp.cpp.o:
-	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/reactor/Timestamp.cpp.o
-.PHONY : reactor/Timestamp.cpp.o
-
-reactor/Timestamp.i: reactor/Timestamp.cpp.i
-
-.PHONY : reactor/Timestamp.i
-
-# target to preprocess a source file
-reactor/Timestamp.cpp.i:
-	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/reactor/Timestamp.cpp.i
-.PHONY : reactor/Timestamp.cpp.i
-
-reactor/Timestamp.s: reactor/Timestamp.cpp.s
-
-.PHONY : reactor/Timestamp.s
-
-# target to generate assembly for a file
-reactor/Timestamp.cpp.s:
-	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/reactor/Timestamp.cpp.s
-.PHONY : reactor/Timestamp.cpp.s
-
 reactor/main.o: reactor/main.cpp.o
 
 .PHONY : reactor/main.o
@@ -825,6 +825,33 @@ reactor/tcpserver.cpp.s:
 	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/reactor/tcpserver.cpp.s
 .PHONY : reactor/tcpserver.cpp.s
 
+timer/TimeWheel.o: timer/TimeWheel.cpp.o
+
+.PHONY : timer/TimeWheel.o
+
+# target to build an object file
+timer/TimeWheel.cpp.o:
+	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.o
+.PHONY : timer/TimeWheel.cpp.o
+
+timer/TimeWheel.i: timer/TimeWheel.cpp.i
+
+.PHONY : timer/TimeWheel.i
+
+# target to preprocess a source file
+timer/TimeWheel.cpp.i:
+	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.i
+.PHONY : timer/TimeWheel.cpp.i
+
+timer/TimeWheel.s: timer/TimeWheel.cpp.s
+
+.PHONY : timer/TimeWheel.s
+
+# target to generate assembly for a file
+timer/TimeWheel.cpp.s:
+	$(MAKE) -f CMakeFiles/httpserver.dir/build.make CMakeFiles/httpserver.dir/timer/TimeWheel.cpp.s
+.PHONY : timer/TimeWheel.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -870,6 +897,9 @@ help:
 	@echo "... memory_pool2/threadcache.o"
 	@echo "... memory_pool2/threadcache.i"
 	@echo "... memory_pool2/threadcache.s"
+	@echo "... mysql/User.o"
+	@echo "... mysql/User.i"
+	@echo "... mysql/User.s"
 	@echo "... mysql/sqlconnpool.o"
 	@echo "... mysql/sqlconnpool.i"
 	@echo "... mysql/sqlconnpool.s"
@@ -903,15 +933,15 @@ help:
 	@echo "... reactor/ThreadPool.o"
 	@echo "... reactor/ThreadPool.i"
 	@echo "... reactor/ThreadPool.s"
-	@echo "... reactor/Timestamp.o"
-	@echo "... reactor/Timestamp.i"
-	@echo "... reactor/Timestamp.s"
 	@echo "... reactor/main.o"
 	@echo "... reactor/main.i"
 	@echo "... reactor/main.s"
 	@echo "... reactor/tcpserver.o"
 	@echo "... reactor/tcpserver.i"
 	@echo "... reactor/tcpserver.s"
+	@echo "... timer/TimeWheel.o"
+	@echo "... timer/TimeWheel.i"
+	@echo "... timer/TimeWheel.s"
 .PHONY : help
 
 
